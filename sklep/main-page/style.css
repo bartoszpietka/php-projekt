@@ -1,0 +1,42 @@
+*{
+    color: white;
+}
+
+body{
+    margin: 0;
+    background-color: #050505;
+    font-family: Trebuchet MS;
+}
+
+#menu{
+    background-color: #101010;
+    height: 140px;
+    width: 100%;
+}
+
+#searchinput{
+    width: 400px;
+    font-size: 18px;
+    background-color: #10101000;
+    border: 3px solid white;
+    border-right: 1px solid white;
+}
+
+#searchbutton{
+    background-color: #10101000;
+    border: 3px solid white;
+    border-left: none;
+    width: 40px;
+}
+
+#header{
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-rows: 140px;
+    grid-template-areas: "homepage searchbar shoppingcart";
+    align-items: center;
+}
+
+#searchform {
+    display: flex;
+}
