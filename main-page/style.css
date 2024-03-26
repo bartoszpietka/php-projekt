@@ -4,12 +4,12 @@
 
 body{
     margin: 0;
-    background-color: #050505;
+    background-color: #CE576150;
     font-family: Trebuchet MS;
 }
 
 #menu{
-    background-color: #101010;
+    background-color: #CE5761;
     height: 140px;
     width: 100%;
 }
@@ -39,4 +39,104 @@ body{
 
 #searchform {
     display: flex;
+}
+
+#formlogin{
+    box-shadow: 0 0 8px #00000030;
+    background-color: aliceblue;
+    margin: auto;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 400px;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh 10vh 10vh 10vh;
+    grid-template-areas: "inputlogin" "inputpassword" "buttonlogin" "registertext";
+}
+
+.loginform{
+    margin: 5px;
+    margin-bottom: 20px;
+    color: #ac3a43;
+    grid-area: buttonlogin;
+    width: 310px;
+    font-size: 18px;
+    background-color: #10101000;
+    border: 1px solid #ac3a43;
+}
+
+#inputlogin{
+    margin-top: 30px;
+    grid-area: inputlogin;
+}
+
+#inputpassword{
+    grid-area: inputpassword;
+}
+
+#buttonlogin{
+    width: 318px;
+    color: #ac3a43;
+    grid-area: buttonlogin;
+}
+
+#registertext{
+    color: #ac3a43;
+    margin: auto;
+    margin-bottom: 20px;
+    grid-area: registertext;
+}
+
+#formregister{
+    box-shadow: 0 0 8px #00000030;
+    background-color: aliceblue;
+    margin: auto;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 400px;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh 10vh 10vh 10vh;
+    grid-template-areas: "inputlogin" "inputpassword" "buttonlogin" "registertext";
+}
+
+.registerform{
+    margin: 5px;
+    margin-bottom: 20px;
+    color: #ac3a43;
+    grid-area: buttonlogin;
+    width: 310px;
+    font-size: 18px;
+    background-color: #10101000;
+    border: 1px solid #ac3a43;
+}
+
+#inputregister{
+    margin-top: 30px;
+    grid-area: inputlogin;
+}
+
+#registerpassword{
+    grid-area: inputpassword;
+}
+
+#buttonregister{
+    width: 318px;
+    color: #ac3a43;
+    grid-area: buttonlogin;
+}
+
+#logintext{
+    color: #ac3a43;
+    margin: auto;
+    margin-bottom: 20px;
+    grid-area: registertext;
 }

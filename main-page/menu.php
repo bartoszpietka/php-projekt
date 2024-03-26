@@ -1,3 +1,6 @@
+<?php
+session_start()
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,10 +30,23 @@
             </button>
         </form>
         
-        <form action="../login/" method="post">
-            <button style="font-size: 20px; background-color: #10101000;">Zaloguj się</button>
-        </form>
+        <?php
+        if($_SESSION["czyzalogowano"] == false){
+            echo "<button style='font-size: 20px; background-color: #10101000; border: 2px solid white; width: 130px;' onclick='zaloguj()'>Zaloguj się</button>";
+        }else{
+            echo "<button style='font-size: 20px; background-color: #10101000; border: 2px solid white; width: 130px;' onclick='wyloguj()'>Wyloguj się</button>";
+        }
+        ?>
     </div>
     
+    <script>
+        function zaloguj(){
+            window.location.assign("../login/")
+        }
+
+        function wyloguj(){
+            window.location.assign("../logout/")
+        }
+    </script>
 </body>
 </html>
