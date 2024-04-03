@@ -19,7 +19,7 @@
 
     $_SESSION["user"] = "";
 
-    $_SESSION["upr"] = "";
+    $_SESSION["upraw"] = "";
 
     echo "<script>
     setTimeout(() => {
