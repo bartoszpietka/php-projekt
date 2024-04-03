@@ -10,9 +10,9 @@ session_start()
     <style>
         #header{
             display: grid;
-            grid-template-columns: 8% 7% 70% 7% 8%;
+            grid-template-columns: 8% 9% 68% 7% 8%;
             grid-template-rows: 140px;
-            grid-template-areas: "homepage null searchbar userprofile shoppingcart";
+            grid-template-areas: "homepage panels searchbar userprofile shoppingcart";
             align-items: center;
         }
     </style>
@@ -23,7 +23,22 @@ session_start()
             <img src="../images/logo.png" alt="logo" style="margin: 20px; height: 100px;">
         </a>
         
-        <div style="grid-area: null;"></div>
+        <div style="grid-area: panels; display: flex; z-index: 2;">
+        <?php
+        $conn = mysqli_connect("localhost", "root", "", "projektsklep");
+
+        if($_SESSION["upraw"] == "admin"){
+            echo "<a href='../admin' style='margin-left: 100px;'>
+            <img src='../images/adminpanel.png' alt='Panel administratora' style='height: 60px;'>
+            </a>";
+        }
+
+        if($_SESSION["upraw"] == "admin" or $_SESSION["upraw"] == "worker"){
+            echo "<a href='../worker' style='margin-left: 200px;'>
+            <img src='../images/workerpanel.png' alt='Panel administratora' style='height: 60px;'>
+            </a>";
+        }
+        ?></div>
 
         <form action="../search/" id="searchform" style="grid-area: searchbar; display: flex; justify-content: center;">
             <input type="text" id="searchinput" name="searchedphrase">
@@ -33,8 +48,6 @@ session_start()
         </form>
         
         <?php
-        $conn = mysqli_connect("localhost", "root", "", "projektsklep");
-
         if($_SESSION["czyzalogowano"] == false){
             echo "<button style='font-size: 20px; background-color: #10101000; border: 2px solid white; width: 130px;' onclick='zaloguj()'>Zaloguj się</button>";
 
