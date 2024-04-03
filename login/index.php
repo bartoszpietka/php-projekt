@@ -17,12 +17,8 @@
     <div id="divloginmenu">
         <form action="" method="post" id="formlogin" style="display: flex; flex-direction: column;">
             <input type="text" name="login" placeholder="nazwa użytkownika" id="inputlogin" class="loginform">
-            <input type="text" name="haslo" placeholder="hasło" id="inputpassword" class="loginform">
+            <input type="password" name="haslo" placeholder="hasło" id="inputpassword" class="loginform">
             <input type="submit" id="buttonlogin" class="loginform" value="Zaloguj się">
-            <p id="registertext">Nie posiadasz konta? <a href="../register/" style="color: #ac3a43;">Zarejestruj się</a></p>
-        </form>
-    </div>
-
     <?php
     if(isset($_POST["login"], $_POST["haslo"])){
         $login = $_POST["login"];
@@ -33,8 +29,6 @@
         }
 
         $szsz = szyfr($password);
-
-        $conn = mysqli_connect("localhost", "root", "", "projektsklep");
 
         $sql = "SELECT * FROM uzytkownicy WHERE login='$login' AND haslo='$szsz'";
         $res = mysqli_query($conn, $sql);
@@ -61,9 +55,13 @@
 
             $_SESSION["upraw"] = "";
 
-            echo "nie udało się zalogować";
+            echo "<p style='color: black;'>nie udało się zalogować</p>";
         }
     }
     ?>
+            <p id="registertext">Nie posiadasz konta? <a href="../register/" style="color: #ac3a43;">Zarejestruj się</a></p>
+        </form>
+    </div>
+
 </body>
 </html>

@@ -4,7 +4,7 @@
 
 body{
     margin: 0;
-    background-color: #CE576150;
+    background-color: #efcacd;
     font-family: Trebuchet MS;
 }
 
@@ -17,13 +17,13 @@ body{
 #searchinput{
     width: 400px;
     font-size: 18px;
-    background-color: #10101000;
+    background-color: #00000000;
     border: 3px solid white;
     border-right: 1px solid white;
 }
 
 #searchbutton{
-    background-color: #10101000;
+    background-color: #00000000;
     border: 3px solid white;
     border-left: none;
     width: 40px;
@@ -65,7 +65,7 @@ body{
     grid-area: buttonlogin;
     width: 310px;
     font-size: 18px;
-    background-color: #10101000;
+    background-color: #00000000;
     border: 1px solid #ac3a43;
 }
 
@@ -87,7 +87,7 @@ body{
 #registertext{
     color: #ac3a43;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     grid-area: registertext;
 }
 
@@ -115,7 +115,7 @@ body{
     grid-area: buttonlogin;
     width: 310px;
     font-size: 18px;
-    background-color: #10101000;
+    background-color: #00000000;
     border: 1px solid #ac3a43;
 }
 
@@ -137,6 +137,66 @@ body{
 #logintext{
     color: #ac3a43;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     grid-area: registertext;
+}
+
+.productdiv{
+    color: black;
+    height: 570px;
+    width: 370px;
+    background-color: white;
+    margin: 15px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 325px 45px;
+    grid-template-rows: 370px 50px 100px 50px;
+    grid-template-areas:
+    "img img"
+    "nazwa ilosc"
+    "cena cena"
+    "przycisk przycisk";
+}
+
+.productimg{
+    height: 370px;
+    width: 370px;
+    grid-area: img;
+}
+
+.productnazwa{
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    grid-area: nazwa;
+    color: black;
+}
+
+.productcena{
+    margin: 0;
+    font-size: 20px;
+    grid-area: cena;
+    color: black;
+}
+
+.productilosc{
+    margin-top: 15px;
+    font-size: 20px;
+    grid-area: ilosc;
+    color: black;
+}
+
+.productbtn{
+    width: 350px;
+    height: 40px;
+    font-size: 20px;
+    color: #4e914e;
+    background-color: #00000000;
+    border: 1px solid #4e914e;
+}
+
+.productbtndiv{
+    grid-area: przycisk;
+    display: flex;
+    justify-content: center;
 }

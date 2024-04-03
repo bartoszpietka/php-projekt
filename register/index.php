@@ -30,9 +30,7 @@
             
                 $szsz = szyfr($password);
             
-                $conn = mysqli_connect("localhost", "root", "", "projektsklep");
-            
-                $insert = "INSERT INTO uzytkownicy (`login`, `haslo`, `upraw`) VALUES ('$login','$szsz','user')";
+                $insert = "INSERT INTO uzytkownicy (`login`, `haslo`, `upraw`, `pfp`) VALUES ('$login','$szsz','user','basic.png')";
             
                 if(mysqli_query($conn, $insert)){
                     echo "<p style='color: black;'>Pomyślnie utworzono konto</p>";

@@ -14,8 +14,25 @@
         ?>
     </div>
     
-    <main>
-        
+    <main style="padding-left: 10vh; display: flex; flex-wrap: wrap;">
+        <?php
+
+        $sqlquery = mysqli_query($conn, "SELECT * FROM produkty");
+
+        if(mysqli_num_rows($sqlquery) > 0){
+            while($h = mysqli_fetch_assoc($sqlquery)){
+                echo "<div class='productdiv'>
+                <img class='productimg' src='../images/".$h["zdjecie"]."'>
+                <p class='productnazwa'>".$h["nazwa"]."</p>
+                <p class='productcena'>".$h["cena"]." zł</p>
+                <p class='productilosc'>ilość: ".$h["ilosc"]."</p>
+                <div class='productbtndiv'>
+                    <button class='productbtn'>Dodaj do koszyka</button>
+                </div>
+                </div>";
+            }
+        }
+        ?>
     </main>
 </body>
 </html>

@@ -10,16 +10,16 @@ session_start()
     <style>
         #header{
             display: grid;
-            grid-template-columns: 33% 52% 15%;
+            grid-template-columns: 38% 47% 7% 8%;
             grid-template-rows: 140px;
-            grid-template-areas: "homepage searchbar shoppingcart";
+            grid-template-areas: "homepage searchbar userprofile shoppingcart";
             align-items: center;
         }
     </style>
 </head>
 <body>
     <div id="header">
-        <a href="http://localhost/sklep/main-page/" style="color: #10101000; grid-area: homepage;">
+        <a href="http://localhost/sklep/main-page/" style="color: #00000000; grid-area: homepage;">
             <img src="../images/logo.png" alt="logo" style="margin: 20px; height: 100px;">
         </a>
 
@@ -31,10 +31,26 @@ session_start()
         </form>
         
         <?php
+        $conn = mysqli_connect("localhost", "root", "", "projektsklep");
+
         if($_SESSION["czyzalogowano"] == false){
             echo "<button style='font-size: 20px; background-color: #10101000; border: 2px solid white; width: 130px;' onclick='zaloguj()'>Zaloguj się</button>";
+
+            $_SESSION["czyzalogowano"] = false;
+
+            $_SESSION["user"] = "";
+
+            $_SESSION["upraw"] = "";
         }else{
-            echo "<button style='font-size: 20px; background-color: #10101000; border: 2px solid white; width: 130px;' onclick='wyloguj()'>Wyloguj się</button>";
+            $q = mysqli_query($conn, "SELECT * FROM uzytkownicy");
+            $row = mysqli_fetch_assoc($q);
+            $pfp = $row['pfp'];
+
+            echo "<a href=''>
+                <img src='../pfp/$pfp' alt='strona użytkownika' style='margin: 20px; height: 60px; border: 0; border-radius: 100%;'>
+            </a>
+            
+            <button style='font-size: 20px; background-color: #10101000; border: 2px solid white; width: 130px;' onclick='wyloguj()'>Wyloguj się</button>";
         }
         ?>
     </div>
