@@ -15,7 +15,7 @@
     </div>
     
     <div id="divloginmenu">
-        <form action="" method="post" id="formlogin" style="display: flex; flex-direction: column;">
+        <form action="" method="post" class="formlogin" style="display: flex; flex-direction: column;">
             <input type="text" name="login" placeholder="nazwa użytkownika" id="inputlogin" class="loginform">
             <input type="password" name="haslo" placeholder="hasło" id="inputpassword" class="loginform">
             <input type="submit" id="buttonlogin" class="loginform" value="Zaloguj się">
@@ -59,7 +59,7 @@
         }
     }
     ?>
-            <p id="registertext">Nie posiadasz konta? <a href="../register/" style="color: #ac3a43;">Zarejestruj się</a></p>
+            <p id="logintext">Nie posiadasz konta? <a href="../register/" style="color: #ac3a43;">Zarejestruj się</a></p>
         </form>
     </div>
 

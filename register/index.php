@@ -14,11 +14,11 @@
         ?>
     </div>
 
-    <div id="divregistermenu">
-        <form action="" method="POST" id="formregister" style="display: flex; flex-direction: column;">
-            <input type="text" name="login" placeholder="nazwa użytkownika" id="inputregister" class="registerform">
-            <input type="text" name="haslo" placeholder="hasło" id="inputpassword" class="registerform">
-            <input type="submit" id="buttonregister" class="registerform" value="Zarejestruj się">
+    <main>
+        <form action="" method="POST" class="formlogin" style="display: flex; flex-direction: column;">
+            <input type="text" name="login" placeholder="nazwa użytkownika" class="loginform">
+            <input type="text" name="haslo" placeholder="hasło" class="loginform">
+            <input type="submit" class="loginform" value="Zarejestruj się">
             <?php
             if(isset($_POST["login"], $_POST["haslo"])){
                 $login = $_POST["login"];
@@ -41,7 +41,7 @@
             ?>
             <p id="logintext">Posiadasz już konto? <a href="../login/" style="color: #ac3a43;">Zaloguj się</a></p>
         </form>
-    </div>
+    </main>
 
 </body>
 </html>

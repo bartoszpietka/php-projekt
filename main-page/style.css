@@ -41,15 +41,16 @@ body{
     display: flex;
 }
 
-#formlogin{
+.formlogin{
     box-shadow: 0 0 8px #00000030;
     background-color: aliceblue;
     margin: auto;
     margin-top: 60px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 600px;
+    height: 500px;
     width: 400px;
 
     display: grid;
@@ -69,88 +70,24 @@ body{
     border: 1px solid #ac3a43;
 }
 
-#inputlogin{
-    margin-top: 30px;
-    grid-area: inputlogin;
-}
-
-#inputpassword{
-    grid-area: inputpassword;
-}
-
-#buttonlogin{
-    width: 318px;
-    color: #ac3a43;
-    grid-area: buttonlogin;
-}
-
-#registertext{
-    color: #ac3a43;
-    margin: auto;
-    margin-bottom: 30px;
-    grid-area: registertext;
-}
-
-#formregister{
-    box-shadow: 0 0 8px #00000030;
-    background-color: aliceblue;
-    margin: auto;
-    margin-top: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 600px;
-    width: 400px;
-
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 10vh 10vh 10vh 10vh;
-    grid-template-areas: "inputlogin" "inputpassword" "buttonlogin" "registertext";
-}
-
-.registerform{
-    margin: 5px;
-    margin-bottom: 20px;
-    color: #ac3a43;
-    grid-area: buttonlogin;
-    width: 310px;
-    font-size: 18px;
-    background-color: #00000000;
-    border: 1px solid #ac3a43;
-}
-
-#inputregister{
-    margin-top: 30px;
-    grid-area: inputlogin;
-}
-
-#registerpassword{
-    grid-area: inputpassword;
-}
-
-#buttonregister{
-    width: 318px;
-    color: #ac3a43;
-    grid-area: buttonlogin;
-}
-
 #logintext{
     color: #ac3a43;
-    margin: auto;
-    margin-bottom: 30px;
+    margin-top: 200px;
     grid-area: registertext;
 }
+
+/* ~~~~ produkty ~~~~ */
 
 .productdiv{
     color: black;
-    height: 570px;
-    width: 370px;
+    height: 520px;
+    width: 320px;
     background-color: white;
     margin: 15px;
     padding: 15px;
     display: grid;
-    grid-template-columns: 325px 45px;
-    grid-template-rows: 370px 50px 100px 50px;
+    grid-template-columns: 270px 30px;
+    grid-template-rows: 320px 80px 50px 30px;
     grid-template-areas:
     "img img"
     "nazwa ilosc"
@@ -159,8 +96,7 @@ body{
 }
 
 .productimg{
-    height: 370px;
-    width: 370px;
+    height: 320px;
     grid-area: img;
 }
 
@@ -199,4 +135,114 @@ body{
     grid-area: przycisk;
     display: flex;
     justify-content: center;
+}
+
+/* ~~~~ strona pracownika ~~~~ */
+
+.productworkerdiv{
+    color: black;
+    height: 270px;
+    width: 570px;
+    background-color: white;
+    margin: 15px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 430px 140px;
+    grid-template-rows: 170px 50px 15px 20px;
+    grid-template-areas:
+    "img btns"
+    "nazwa btns"
+    "cena btns"
+    "ilosc btns";
+}
+
+.productworkerimg{
+    height: 170px;
+    width: 170px;
+    grid-area: img;
+}
+
+.productworkernazwa{
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    grid-area: nazwa;
+    color: black;
+}
+
+.productworkercena{
+    margin: 0;
+    font-size: 20px;
+    grid-area: cena;
+    color: black;
+}
+
+.productworkerilosc{
+    margin-top: 15px;
+    font-size: 20px;
+    grid-area: ilosc;
+    color: black;
+}
+
+.btns{
+    grid-area: btns;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 140px;
+    grid-template-rows: 40px 70px 40px 70px 40px;
+    grid-template-areas:
+    "post"
+    "s"
+    "edit"
+    "d"
+    "delete";
+}
+
+.productworkerbtn{
+    width: 140px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.productworkerhid{
+    grid-area: post;
+    color: #4e914e;
+    background-color: #00000000;
+    border: 1px solid #4e914e;
+}
+
+.productworkeredit{
+    grid-area: edit;
+    color: #4d96db;
+    background-color: #00000000;
+    border: 1px solid #4d96db;
+}
+
+.productworkerdel{
+    grid-area: delete;
+    color: #db4d4d;
+    background-color: #00000000;
+    border: 1px solid #db4d4d;
+}
+
+.productworkeritpnazwa{
+    font-size: 23px;
+    color: black;
+    font-weight: bold;
+}
+
+.productworkeritpcena{
+    color: black;
+}
+
+.productworkeritpilosc{
+    color: black;
+}
+
+/* ~~~~ koniec ~~~~ */
+
+.productworkerdiv a {
+    color: #4d96db;
 }
