@@ -23,7 +23,34 @@
     </div>
     
     <main style="display: flex; flex-wrap: wrap; justify-content: center;">
+        <?php
+        $sqlquery = mysqli_query($conn, "SELECT * FROM uzytkownicy");
+
+        if(mysqli_num_rows($sqlquery) > 0){
+            while($h = mysqli_fetch_assoc($sqlquery)){
+                echo "<form class='useradmindiv' action='edit.php' method='get'>
+                <p id='useradminlogin-".$h["login"]."' class='useradminlogin'>Nazwa użytkownika: ".$h["login"]."</p>
+                <p id='useradminupraw-".$h["login"]."' class='useradminupraw'>Uprawnienia: ".$h["upraw"]."</p>
+
+                <input type='hidden' name='userid' value=".$h["id"].">
+                <button type='submit' class='useradminbtn'>
+                <img height='40px' src='../images/edit.png' alt='Edytuj użytkownika'>
+                </button>
+                </form>";
+            }
+        }
+
         
+        if(isset($_POST["editloginedit"], $_POST["edituprawedit"])){
+            $id = $_POST["userid"];
+            $login_edited = $_POST["editloginedit"];
+            $upraw_edited = $_POST["edituprawedit"];
+
+            $sql = mysqli_query($conn, "UPDATE `uzytkownicy` SET `login`='$login_edited',`upraw`='".strtolower($upraw_edited)."' WHERE id=$id");
+
+            header("Refresh:0");
+        }
+        ?>
     </main>
 </body>
 </html>

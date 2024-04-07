@@ -86,8 +86,8 @@ body{
     margin: 15px;
     padding: 15px;
     display: grid;
-    grid-template-columns: 270px 30px;
-    grid-template-rows: 320px 80px 50px 30px;
+    grid-template-columns: 270px 50px;
+    grid-template-rows: 320px 80px 80px 30px;
     grid-template-areas:
     "img img"
     "nazwa ilosc"
@@ -126,9 +126,9 @@ body{
     width: 350px;
     height: 40px;
     font-size: 20px;
-    color: #4e914e;
+    color: black;
     background-color: #00000000;
-    border: 1px solid #4e914e;
+    border: 1px solid black;
 }
 
 .productbtndiv{
@@ -190,7 +190,7 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
     display: grid;
-    grid-template-columns: 140px;
+    grid-template-columns: 60px;
     grid-template-rows: 40px 70px 40px 70px 40px;
     grid-template-areas:
     "post"
@@ -210,21 +210,21 @@ body{
     grid-area: post;
     color: #4e914e;
     background-color: #00000000;
-    border: 1px solid #4e914e;
+    border: 0;
 }
 
 .productworkeredit{
     grid-area: edit;
     color: #4d96db;
     background-color: #00000000;
-    border: 1px solid #4d96db;
+    border: 0;
 }
 
 .productworkerdel{
     grid-area: delete;
     color: #db4d4d;
     background-color: #00000000;
-    border: 1px solid #db4d4d;
+    border: 0;
 }
 
 .productworkeritpnazwa{
@@ -246,3 +246,227 @@ body{
 .productworkerdiv a {
     color: #4d96db;
 }
+
+/* ~~~~ strona admina ~~~~*/
+
+.useradmindiv{
+    height: 80px;
+    width: 400px;
+    background-color: white;
+    margin: 20px;
+    padding: 0px 0px 10px 10px;
+    display: grid;
+    grid-template-columns: 260px 200px;
+    grid-template-rows: 40px 40px;
+    grid-template-areas: "login login" "upraw btn";
+}
+
+.useradminlogin{
+    grid-area: login;
+    color: black;
+}
+
+.useradminupraw{
+    grid-area: upraw;
+    color: black;
+}
+
+.useradminbtn{
+    grid-area: btn;
+    color: #4d96db;
+    background-color: #00000000;
+    border: 0;
+}
+
+/* ~~~~ koniec ~~~~ */
+
+/* ~~~~ edytowanie uzytkownika ~~~~*/
+
+.useradmindivedit{
+    box-shadow: 0 0 8px #00000030;
+    background-color: aliceblue;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 400px;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh 10vh 10vh 10vh;
+    grid-template-areas: "login" "upraw" "btn" "delete";
+}
+
+.useradminloginedit{
+    grid-area: login;
+    margin: 5px;
+    margin-bottom: 20px;
+    width: 310px;
+    color: #4d96db;
+    font-size: 18px;
+    background-color: #00000000;
+    border: 1px solid #4d96db;
+}
+
+.useradminuprawedit{
+    grid-area: upraw;
+    margin: 5px;
+    margin-bottom: 20px;
+    width: 310px;
+    color: #4d96db;
+    font-size: 18px;
+    background-color: #00000000;
+    border: 1px solid #4d96db;
+}
+
+.useradminbtnedit{
+    grid-area: btn;
+    margin: 5px;
+    margin-bottom: 20px;
+    width: 310px;
+    color: #4d96db;
+    font-size: 18px;
+    background-color: #00000000;
+    border: 1px solid #4d96db;
+}
+
+.useradminbtndel{
+    grid-area: delete;
+    margin: 5px;
+    margin-top: 200px;
+    margin-bottom: 20px;
+    width: 310px;
+    font-size: 18px;
+    color: #db4d4d;
+    background-color: #00000000;
+    border: 1px solid #db4d4d;
+}
+
+/* ~~~~ koniec ~~~~ */
+
+/* ~~~~ koszyk ~~~~ */
+
+.usercartdiv{
+    height: 100px;
+    width: 480px;
+    background-color: aliceblue;
+    margin: 0 20px 0 20px;
+    padding: 10px 0px 0px 10px;
+    display: grid;
+    border: 1px solid #00000010;
+    grid-template-columns: 80px 200px 100px 100px;
+    grid-template-rows: 50px 30px;
+    grid-template-areas: "img nazwa cena ilosc"
+    "img nazwa cena btn";
+}
+
+.usercartdiv:hover{
+    background-color: #E4EDF5;
+}
+
+.usercartimg{
+    grid-area: img;
+    height: 80px;
+    width: 80px;
+    margin: 2px;
+}
+
+.usercartp{
+    color: black;
+    margin: 0px 20px 0px 20px;
+}
+
+.usercartnazwa{
+    grid-area: nazwa;
+    height: 80px;
+}
+
+.usercartcena{
+    grid-area: cena;
+}
+
+.usercartilosc{
+    grid-area: ilosc;
+}
+
+.usercartbtn{
+    grid-area: btn;
+}
+
+/* ~~~~ koniec ~~~~ */
+
+/* ~~~~ strona produktu ~~~~ */
+
+.prodproductdiv{
+    color: black;
+    height: 400px;
+    width: 1000px;
+    background-color: white;
+    margin: 15px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 400px 550px;
+    grid-template-rows: 400px 130px;
+    grid-template-areas:
+    "img free"
+    "img free";
+}
+
+.freeeeee{
+    display: grid;
+    grid-template-columns: 450px 100px;
+    grid-template-rows: 50px 300px 50px;
+    grid-template-areas:
+    "nazwa ilosc"
+    "cena ilosc"
+    "btn btn";
+}
+
+.prodproductimg{
+    height: 380px;
+    grid-area: img;
+}
+
+.prodproductnazwa{
+    grid-area: nazwa;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+}
+
+.prodproductcena{
+    grid-area: cena;
+    font-size: 20px;
+    color: black;
+}
+
+.prodproductilosc{
+    grid-area: ilosc;
+    font-size: 20px;
+    color: black;
+    margin-top: 4vh;
+}
+
+.prodproductbtndiv{
+    grid-area: btn;
+    justify-content: end;
+}
+
+.prodproductbtn{
+    font-size: 20px;
+    color: black;
+    background-color: #00000000;
+    border: 1px solid black;
+}
+
+.prodproductipt{
+    font-size: 20px;
+    width: 44px;
+    color: black;
+    border: 0;
+}
+
+/* ~~~~ koniec ~~~~ */

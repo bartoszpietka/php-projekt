@@ -41,6 +41,8 @@
 
             $row = mysqli_fetch_assoc($res);
 
+            $_SESSION["id"] = $row["id"];
+
             $_SESSION["user"] = $row["login"];
 
             $_SESSION["upraw"] = $row["upraw"];
@@ -50,6 +52,8 @@
             //niezalogowano
 
             $_SESSION["czyzalogowano"] = false;
+
+            $_SESSION["id"] = "";
 
             $_SESSION["user"] = "";
 

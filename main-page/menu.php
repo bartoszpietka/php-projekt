@@ -6,7 +6,7 @@ session_start()
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu</title>
     <link rel="icon" type="image/x-icon" href="../images/icon.png">
     <style>
         #header{
@@ -21,7 +21,7 @@ session_start()
 <body>
     <div id="header">
         <a href="http://localhost/sklep/main-page/" style="color: #00000000; grid-area: homepage;">
-            <img src="../images/logo.png" alt="logo" style="margin: 20px; height: 100px;">
+            <img src="../images/logo.png" alt="Strona główna" style="margin: 20px; height: 100px;">
         </a>
         
         <div style="grid-area: panels; display: flex; z-index: 2;">
@@ -35,14 +35,14 @@ session_start()
         }
 
         if($_SESSION["upraw"] == "admin" or $_SESSION["upraw"] == "worker"){
-            echo "<a href='../worker' style='margin-left: 20vh;'>
-            <img src='../images/workerpanel.png' alt='Panel administratora' style='height: 60px;'>
+            echo "<a href='../worker' style='margin-left: 15vh;'>
+            <img src='../images/workerpanel.png' alt='Panel pracownika' style='height: 60px;'>
             </a>";
         }
         ?></div>
 
         <form action="../search/" id="searchform" style="grid-area: searchbar; display: flex; justify-content: center;">
-            <input type="text" id="searchinput" name="searchedphrase">
+            <input type="text" id="searchinput" name="s">
             <button id="searchbutton" type="submit">
                 <img src="../images/search.png" alt="wyszukaj" style="height: 19px;">
             </button>
@@ -60,10 +60,9 @@ session_start()
         }else{
             $q = mysqli_query($conn, "SELECT * FROM uzytkownicy");
             $row = mysqli_fetch_assoc($q);
-            $pfp = $row['pfp'];
 
-            echo "<a href=''>
-                <img src='../pfp/$pfp' alt='strona użytkownika' style='margin: 20px; height: 60px; border: 0; border-radius: 100%;'>
+            echo "<a href='../cart/'>
+                <img src='../images/scart.png' alt='Koszyk' style='margin: 0; height: 60px; border: 0;'>
             </a>
             
             <button style='font-size: 20px; background-color: #10101000; border: 2px solid white; width: 130px;' onclick='wyloguj()'>Wyloguj się</button>";
