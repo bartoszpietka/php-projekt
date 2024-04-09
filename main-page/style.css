@@ -125,12 +125,17 @@ body{
     color: black;
     background-color: #00000000;
     border: 1px solid black;
+    cursor: pointer;
 }
 
 .productbtndiv{
     grid-area: przycisk;
     display: flex;
     justify-content: center;
+}
+
+.productbtn:hover{
+    background-color: #f0f8ff80;
 }
 
 /* ~~~~ strona pracownika ~~~~ */

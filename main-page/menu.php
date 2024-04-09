@@ -51,7 +51,7 @@ session_start()
 
         <form action="../search/" id="searchform" style="grid-area: searchbar; display: flex; justify-content: center;">
             <input type="text" id="searchinput" name="s">
-            <button id="searchbutton" type="submit">
+            <button id="searchbutton" type="submit" style='cursor: pointer;'>
                 <img src="../images/search.png" alt="wyszukaj" style="height: 19px;">
             </button>
         </form>
