@@ -26,6 +26,14 @@ session_start()
         
         <div style="grid-area: panels; display: flex; z-index: 2;">
         <?php
+        if(!isset($_SESSION["user"])){
+            $_SESSION["czyzalogowano"] = false;
+
+            $_SESSION["user"] = "";
+
+            $_SESSION["upraw"] = "";
+        }
+
         $conn = mysqli_connect("localhost", "root", "", "projektsklep");
 
         if($_SESSION["upraw"] == "admin"){
@@ -35,7 +43,7 @@ session_start()
         }
 
         if($_SESSION["upraw"] == "admin" or $_SESSION["upraw"] == "worker"){
-            echo "<a href='../worker' style='margin-left: 15vh;'>
+            echo "<a href='../workerpanel' style='margin-left: 15vh;'>
             <img src='../images/workerpanel.png' alt='Panel pracownika' style='height: 60px;'>
             </a>";
         }
@@ -50,7 +58,7 @@ session_start()
         
         <?php
         if($_SESSION["czyzalogowano"] == false){
-            echo "<button style='font-size: 20px; background-color: #10101000; border: 2px solid white; width: 130px;' onclick='zaloguj()'>Zaloguj się</button>";
+            echo "<button style='font-size: 20px; background-color: #10101000; border: 2px solid white; width: 130px; color: white;' onclick='zaloguj()'>Zaloguj się</button>";
 
             $_SESSION["czyzalogowano"] = false;
 
@@ -65,7 +73,7 @@ session_start()
                 <img src='../images/scart.png' alt='Koszyk' style='margin: 0; height: 60px; border: 0;'>
             </a>
             
-            <button style='font-size: 20px; background-color: #10101000; border: 2px solid white; width: 130px;' onclick='wyloguj()'>Wyloguj się</button>";
+            <button style='font-size: 20px; background-color: #10101000; border: 2px solid white; width: 130px; color: white;' onclick='wyloguj()'>Wyloguj się</button>";
         }
         ?>
     </div>

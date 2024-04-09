@@ -1,7 +1,3 @@
-*{
-    color: white;
-}
-
 body{
     margin: 0;
     background-color: #efcacd;
@@ -467,6 +463,57 @@ body{
     width: 44px;
     color: black;
     border: 0;
+}
+
+/* ~~~~ koniec ~~~~ */
+
+/* ~~~~ koszyki u pracowników ~~~~ */
+
+.workercartdiv{
+    height: 100px;
+    width: 480px;
+    background-color: aliceblue;
+    margin: 0 20px 0 20px;
+    padding: 10px 0px 0px 10px;
+    display: grid;
+    border: 1px solid #00000010;
+    grid-template-columns: 80px 250px 100px 50px;
+    grid-template-rows: 50px 30px;
+    grid-template-areas:
+    "img login login btn"
+    "img nazwa cena ilosc";
+}
+
+.workercartimg{
+    grid-area: img;
+    height: 80px;
+    width: 80px;
+    margin: 2px;
+}
+
+.workercartp{
+    margin: 0px 20px 0px 20px;
+}
+
+.workercartlogin{
+    grid-area: login;
+}
+
+.workercartnazwa{
+    grid-area: nazwa;
+    height: 80px;
+}
+
+.workercartcena{
+    grid-area: cena;
+}
+
+.workercartilosc{
+    grid-area: ilosc;
+}
+
+.workercartbtn{
+    grid-area: btn;
 }
 
 /* ~~~~ koniec ~~~~ */

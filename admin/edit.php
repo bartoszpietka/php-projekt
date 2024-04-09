@@ -31,7 +31,13 @@
         echo "<div class='useradmindivedit' style='display: flex; flex-direction: column;'>
         <form action='./' method='POST' style='display: flex; flex-direction: column;'>
         <input type='text' name='editloginedit' placeholder='nazwa użytkownika' class='useradminloginedit' value='".$h["login"]."'>
-        <input type='text' name='edituprawedit' placeholder='uprawnienia' class='useradminuprawedit' value='".$h["upraw"]."'>
+
+        <select name='edituprawedit' class='useradminuprawedit' value='".$h["upraw"]."'>
+        <option name='user'   class='useradminuprawedit'>Użytkownik</option>
+        <option name='worker' class='useradminuprawedit'>Pracownik</option>
+        <option name='admin'  class='useradminuprawedit'>Administrator</option>
+        </select>
+
         <input type='submit' class='useradminbtnedit' value='Zapisz zmiany'>
         <input type='hidden' name='userid' value=".$h["id"].">
         </form>

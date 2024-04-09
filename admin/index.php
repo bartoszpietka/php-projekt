@@ -12,6 +12,16 @@
         <?php
         include "../main-page/menu.php";
 
+        if(isset($_POST["editloginedit"], $_POST["edituprawedit"])){
+            $id = $_POST["userid"];
+            $login_edited = $_POST["editloginedit"];
+            $upraw_edited = $_POST["edituprawedit"];
+
+            $sql = mysqli_query($conn, "UPDATE `uzytkownicy` SET `login`='$login_edited',`upraw`='".strtolower($upraw_edited)."' WHERE id=$id");
+
+            header("Refresh:0");
+        }
+
         if($_SESSION["upraw"]=="worker" or $_SESSION["upraw"]=="admin"){
             
         }else{
@@ -38,17 +48,6 @@
                 </button>
                 </form>";
             }
-        }
-
-        
-        if(isset($_POST["editloginedit"], $_POST["edituprawedit"])){
-            $id = $_POST["userid"];
-            $login_edited = $_POST["editloginedit"];
-            $upraw_edited = $_POST["edituprawedit"];
-
-            $sql = mysqli_query($conn, "UPDATE `uzytkownicy` SET `login`='$login_edited',`upraw`='".strtolower($upraw_edited)."' WHERE id=$id");
-
-            header("Refresh:0");
         }
         ?>
     </main>
