@@ -21,7 +21,7 @@
         JOIN produkty p ON k.productID = p.id
         WHERE u.login = '".$_SESSION["user"]."'");
         ?>
-        <div style="margin: 20px; background-color: white; padding: 0 0 18px 0;">
+        <div style="margin: 20px; background-color: white; padding: 0 0 18px 0; width: 530px;">
             <?php
             echo "<p style='color: black; margin: 20px;'>Koszyk użytkownika⠀<b style='color: black;'>".$_SESSION["user"]."</b></p>";
             if(mysqli_num_rows($sqlquery)>0){

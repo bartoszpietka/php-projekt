@@ -28,6 +28,8 @@
         } else {
             echo "Wystąpił błąd: " . mysqli_error($conn);
         }
+
+        header("location: ../cart/");
         ?>
     </main>
 </body>
