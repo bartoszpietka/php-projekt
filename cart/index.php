@@ -10,6 +10,12 @@
     <div id="menu">
         <?php
         include "../main-page/menu.php";
+        
+        if($_SESSION["czyzalogowano"] = false){
+            echo "<script>
+            location.href = '../login/'
+            </script>";
+        }
         ?>
     </div>
     

@@ -91,7 +91,7 @@
     </div>
     
     <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-        <button onclick="location.href = './add'" class="productworkeredit" style="margin: 15px; height: 50px; width: 300px; background-color: aliceblue; font-size: 20px; border-radius: 5px;">Dodaj nowy produkt</button><br>
+        <button onclick="location.href = './add'" class="productworkeredit" style="margin: 15px; height: 50px; width: 300px; background-color: aliceblue; font-size: 20px; border-radius: 5px; cursor: pointer;">Dodaj nowy produkt</button><br>
     </div>
     <main style="display: flex; flex-wrap: wrap; justify-content: center;">
         <?php
@@ -100,12 +100,33 @@
         if(mysqli_num_rows($sqlquery) > 0){
             while($h = mysqli_fetch_assoc($sqlquery)){
                 echo "<div class='productworkerdiv'>
-                <img class='productworkerimg' src='../images/".$h["zdjecie"]."'>
-                <p id='productworkernazwa".$h["id"]."' class='productworkernazwa'>".$h["nazwa"]."</p>
-                <p id='productworkercena".$h["id"]."' class='productworkercena'>".$h["cena"]." zł</p>
-                <p id='productworkerilosc".$h["id"]."' class='productworkerilosc'>ilość: ".$h["ilosc"]."</p>
+                <img class='productworkerimg' src='../images/".$h["zdjecie"]."'>";
+                if(strlen($h["nazwa"])>37){
+                    echo "<p id='productworkernazwa".$h["id"]."' class='productworkernazwa' style='font-size: 12px;'>".$h["nazwa"]."</p>";
+                }else{
+                    echo "<p id='productworkernazwa".$h["id"]."' class='productworkernazwa'>".$h["nazwa"]."</p>";
+                }
+                echo "<p id='productworkercena".$h["id"]."' class='productworkercena'>".$h["cena"]." zł</p>
+                <p id='productworkerilosc".$h["id"]."' class='productworkerilosc'>ilość: ".$h["ilosc"]."</p>";
+
+                $sqltrack_query = "SELECT * FROM tracks WHERE Pid='".$h["id"]."'";
+                $sqltrack_result = mysqli_query($conn, $sqltrack_query);
+
+                echo "<div class='productworkertrack'>";
+                    while($r = mysqli_fetch_assoc($sqltrack_result)){
+                        if(strlen($r["nazwa"])>37){
+                            if(strlen($r["nazwa"])>55){
+                                echo "<div style='height: 22px;'><p style='margin-top: 0; padding-top: 0; font-size: 10px;'>".$r["nazwa"]."</p></div>";
+                            }else{
+                                echo "<div style='height: 11px;'><p style='margin-top: 0; padding-top: 0; font-size: 10px;'>".$r["nazwa"]."</p></div>";
+                            }
+                        }else{
+                            echo "<div style='height: 15px;'><p style='margin-top: 0; padding-top: 0;'>".$r["nazwa"]."</p></div>";
+                        }
+                    }
+                echo "</div>";
                 
-                <div class='btns'>";
+                echo "<div class='btns'>";
                 if($h["wswtl"]==0){
                     echo "<button id='hid".$h["id"]."' onclick='publish(".$h["id"].")' class='productworkerbtn productworkerhid'>
                     <img height='40px' src='../images/hide.png' alt='Upublicznij'>

@@ -14,22 +14,28 @@
     
     <main>
         <?php
-        $userID = $_SESSION["id"];
-        $productID = $_POST['addprod'];
-        $Kilosc = $_POST['Kilosc'];
+        if(isset($_SESSION["id"])){
+            $userID = $_SESSION["id"];
+            $productID = $_POST['addprod'];
+            $Kilosc = $_POST['Kilosc'];
 
-        echo $userID.", ".$productID.", ".$Kilosc;
+            echo $userID.", ".$productID.", ".$Kilosc;
 
-        $sql = "INSERT INTO `koszyki`(`userID`, `productID`, `Kilosc`)
-        VALUES ('$userID','$productID','$Kilosc')";
-        echo $sql;
-        if(mysqli_query($conn, $sql)) {
-            echo "Produkt został dodany do koszyka.";
-        } else {
-            echo "Wystąpił błąd: " . mysqli_error($conn);
+            $sql = "INSERT INTO `koszyki`(`userID`, `productID`, `Kilosc`)
+            VALUES ('$userID','$productID','$Kilosc')";
+            echo $sql;
+            if(mysqli_query($conn, $sql)) {
+                echo "Produkt został dodany do koszyka.";
+            } else {
+                echo "Wystąpił błąd: " . mysqli_error($conn);
+            }
+
+            header("location: ../cart/");
+        }else{
+                echo "<script>
+                location.href = '../login/'
+                </script>";
         }
-
-        header("location: ../cart/");
         ?>
     </main>
 </body>

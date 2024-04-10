@@ -33,9 +33,9 @@
         <input type='text' name='editloginedit' placeholder='nazwa użytkownika' class='useradminloginedit' value='".$h["login"]."'>
 
         <select name='edituprawedit' class='useradminuprawedit' value='".$h["upraw"]."'>
-        <option name='user'   class='useradminuprawedit'>Użytkownik</option>
-        <option name='worker' class='useradminuprawedit'>Pracownik</option>
-        <option name='admin'  class='useradminuprawedit'>Administrator</option>
+        <option name='user' class='useradminuprawedit'>User</option>
+        <option name='worker' class='useradminuprawedit'>Worker</option>
+        <option name='admin'  class='useradminuprawedit'>Admin</option>
         </select>
 
         <input type='submit' class='useradminbtnedit' value='Zapisz zmiany'>

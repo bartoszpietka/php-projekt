@@ -75,7 +75,6 @@ body{
 /* ~~~~ produkty ~~~~ */
 
 .productdiv{
-    color: black;
     height: 520px;
     width: 320px;
     background-color: white;
@@ -101,28 +100,24 @@ body{
     font-size: 25px;
     font-weight: bold;
     grid-area: nazwa;
-    color: black;
 }
 
 .productcena{
     margin: 0;
     font-size: 20px;
     grid-area: cena;
-    color: black;
 }
 
 .productilosc{
     margin-top: 15px;
     font-size: 20px;
     grid-area: ilosc;
-    color: black;
 }
 
 .productbtn{
     width: 350px;
     height: 40px;
     font-size: 20px;
-    color: black;
     background-color: #00000000;
     border: 1px solid black;
     cursor: pointer;
@@ -141,20 +136,19 @@ body{
 /* ~~~~ strona pracownika ~~~~ */
 
 .productworkerdiv{
-    color: black;
     height: 270px;
-    width: 570px;
+    width: 770px;
     background-color: white;
     margin: 15px;
     padding: 15px;
     display: grid;
-    grid-template-columns: 430px 140px;
+    grid-template-columns: 200px 250px 250px 40px;
     grid-template-rows: 170px 50px 15px 20px;
     grid-template-areas:
-    "img btns"
-    "nazwa btns"
-    "cena btns"
-    "ilosc btns";
+    "img track track btns"
+    "nazwa track track btns"
+    "cena track track btns"
+    "ilosc track track btns";
 }
 
 .productworkerimg{
@@ -168,21 +162,28 @@ body{
     font-size: 15px;
     font-weight: bold;
     grid-area: nazwa;
-    color: black;
 }
 
 .productworkercena{
     margin: 0;
     font-size: 20px;
     grid-area: cena;
-    color: black;
 }
 
 .productworkerilosc{
     margin-top: 15px;
     font-size: 20px;
     grid-area: ilosc;
-    color: black;
+}
+
+.productworkertrack{
+    font-size: 14px;
+    grid-area: track;
+    margin-top: 0;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .btns{
@@ -199,6 +200,10 @@ body{
     "edit"
     "d"
     "delete";
+}
+
+.productworkerbtn:hover{
+    cursor: pointer;
 }
 
 .productworkerbtn{
@@ -230,16 +235,7 @@ body{
 
 .productworkeritpnazwa{
     font-size: 23px;
-    color: black;
     font-weight: bold;
-}
-
-.productworkeritpcena{
-    color: black;
-}
-
-.productworkeritpilosc{
-    color: black;
 }
 
 /* ~~~~ koniec ~~~~ */
@@ -264,12 +260,10 @@ body{
 
 .useradminlogin{
     grid-area: login;
-    color: black;
 }
 
 .useradminupraw{
     grid-area: upraw;
-    color: black;
 }
 
 .useradminbtn{
@@ -376,7 +370,6 @@ body{
 }
 
 .usercartp{
-    color: black;
     margin: 0px 20px 0px 20px;
 }
 
@@ -402,7 +395,6 @@ body{
 /* ~~~~ strona produktu ~~~~ */
 
 .prodproductdiv{
-    color: black;
     height: 400px;
     width: 1000px;
     background-color: white;
@@ -435,19 +427,16 @@ body{
     grid-area: nazwa;
     font-size: 25px;
     font-weight: bold;
-    color: black;
 }
 
 .prodproductcena{
     grid-area: cena;
     font-size: 20px;
-    color: black;
 }
 
 .prodproductilosc{
     grid-area: ilosc;
     font-size: 20px;
-    color: black;
     margin-top: 4vh;
 }
 
@@ -458,7 +447,6 @@ body{
 
 .prodproductbtn{
     font-size: 20px;
-    color: black;
     background-color: #00000000;
     border: 1px solid black;
 }
@@ -471,7 +459,6 @@ body{
 .prodproductipt{
     font-size: 20px;
     width: 44px;
-    color: black;
     border: 0;
 }
 
