@@ -26,7 +26,9 @@ session_start()
         
         <div style="grid-area: panels; display: flex; z-index: 2;">
         <?php
-        if(!isset($_SESSION["user"])){
+        if(isset($_SESSION["user"])){
+            
+        }else{
             $_SESSION["czyzalogowano"] = false;
 
             $_SESSION["user"] = "";

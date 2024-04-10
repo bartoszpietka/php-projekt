@@ -130,14 +130,14 @@ body{
 }
 
 .productbtn:hover{
-    background-color: #f0f8ff80;
+    background-color: #E4EDF5;
 }
 
 /* ~~~~ strona pracownika ~~~~ */
 
 .productworkerdiv{
     height: 270px;
-    width: 770px;
+    width: 780px;
     background-color: white;
     margin: 15px;
     padding: 15px;
@@ -390,32 +390,59 @@ body{
     grid-area: btn;
 }
 
+#divcartbottom{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "sum buy";
+}
+
+#suma{
+    grid-area: sum;
+}
+
+#buybtn{
+    grid-area: buy;
+    margin: 15px 0 0 47px;
+    width: 200px;
+    height: 30px;
+    background-color: aliceblue;
+    font-size: 20px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#buybtn:hover{
+    background-color: #E4EDF5;
+}
+
 /* ~~~~ koniec ~~~~ */
 
 /* ~~~~ strona produktu ~~~~ */
 
 .prodproductdiv{
-    height: 400px;
-    width: 1000px;
+    height: 420px;
+    width: 1300px;
     background-color: white;
     margin: 15px;
     padding: 15px;
     display: grid;
     grid-template-columns: 400px 550px;
-    grid-template-rows: 400px 130px;
+    grid-template-rows: 390px 30px;
     grid-template-areas:
     "img free"
-    "img free";
+    "btn free";
 }
 
 .freeeeee{
+    grid-area: free;
     display: grid;
-    grid-template-columns: 450px 100px;
-    grid-template-rows: 50px 300px 50px;
+    grid-template-columns: 480px 80px;
+    grid-template-rows: 50px 50px 280px;
     grid-template-areas:
     "nazwa ilosc"
-    "cena ilosc"
-    "btn btn";
+    "cena cena"
+    "track track";
 }
 
 .prodproductimg{
@@ -440,9 +467,15 @@ body{
     margin-top: 4vh;
 }
 
+.prodproducttrack{
+    grid-area: track;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 .prodproductbtndiv{
     grid-area: btn;
-    justify-content: end;
 }
 
 .prodproductbtn{

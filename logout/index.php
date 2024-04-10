@@ -21,6 +21,8 @@
 
     $_SESSION["upraw"] = "";
 
+    $_SESSION["id"] = "";
+
     echo "<script>
     setTimeout(() => {
     location.href = '../main-page/'

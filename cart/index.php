@@ -11,7 +11,7 @@
         <?php
         include "../main-page/menu.php";
         
-        if($_SESSION["czyzalogowano"] = false){
+        if($_SESSION["user"] == ""){
             echo "<script>
             location.href = '../login/'
             </script>";
@@ -56,7 +56,12 @@
 
             $suma = mysqli_fetch_assoc($sqlsum);
 
-            echo "<p style='margin-left: 20px; color: black;'>Suma: " . $suma['suma_cen'] . "</p>";
+            echo "<form id='divcartbottom' action='../buy/' method='post'>
+            <p id='sum' style='margin-left: 20px; color: black; font-size: 20px;'>Suma: " . $suma['suma_cen'] . "</p>";
+            if(mysqli_num_rows($sqlquery)>0){
+                echo "<button id='buybtn'>Kup teraz</button>";
+            }
+            echo "</form>";
             ?>
         </div>
     </main>
