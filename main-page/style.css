@@ -81,12 +81,12 @@ body{
     margin: 15px;
     padding: 15px;
     display: grid;
-    grid-template-columns: 270px 50px;
+    grid-template-columns: 150px 170px;
     grid-template-rows: 320px 80px 80px 30px;
     grid-template-areas:
     "img img"
-    "nazwa ilosc"
-    "cena cena"
+    "nazwa nazwa"
+    "cena ilosc"
     "przycisk przycisk";
 }
 
@@ -109,7 +109,7 @@ body{
 }
 
 .productilosc{
-    margin-top: 15px;
+    margin-top: 0;
     font-size: 20px;
     grid-area: ilosc;
 }
