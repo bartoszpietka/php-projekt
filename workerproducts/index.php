@@ -42,23 +42,6 @@
             }
         }
 
-        function edit(id) {
-            var nazwaElement = document.getElementById('productworkernazwa' + id);
-            var cenaElement = document.getElementById('productworkercena' + id);
-            var iloscElement = document.getElementById('productworkerilosc' + id);
-                
-            var nazwaValue = nazwaElement.innerHTML;
-            var cenaValue = cenaElement.innerHTML.slice(0, -3);
-            var iloscValue = iloscElement.innerHTML.slice(7);
-                
-            nazwaElement.innerHTML = '<input type="text" class="productworkeritpnazwa" id="editNazwa' + id + '" value="' + nazwaValue + '">';
-            cenaElement.innerHTML = '<input type="number" class="productworkeritpcena" id="editCena' + id + '" value="' + cenaValue + '">';
-            iloscElement.innerHTML = '<input type="number" class="productworkeritpilosc" id="editIlosc' + id + '" value="' + iloscValue + '">';
-                
-            var buttonElement = document.getElementById('edit' + id);
-            buttonElement.innerHTML = '<a onclick="update(' + id + ')">GOTOWE</a>';
-        }
-
         function update(id) {
             var nazwaValue = document.getElementById('editNazwa' + id).value;
             var cenaValue = document.getElementById('editCena' + id).value;
@@ -137,7 +120,11 @@
                     </button>";
                 }
                     
-                echo "<button id='edit".$h["id"]."' onclick='edit(".$h["id"].")' class='productworkerbtn productworkeredit'>
+                echo "<form action='./edit/' method='post' class='productworkerbtn productworkeredit'>
+                <input type='hidden' name='ii' value='".$h["id"]."'>
+                <button id='edit".$h["id"]."' type='submit' class='productworkerbtn productworkeredit'>
+                </form>
+
                     <img height='40px' src='../images/edit.png' alt='Edytuj'>
                     </button>
                     <button id='del".$h["id"]."' onclick='pdelete(".$h["id"].")' class='productworkerbtn productworkerdel'>

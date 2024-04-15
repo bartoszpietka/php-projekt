@@ -437,8 +437,8 @@ body{
 .freeeeee{
     grid-area: free;
     display: grid;
-    grid-template-columns: 480px 80px;
-    grid-template-rows: 50px 50px 280px;
+    grid-template-columns: 480px 100px;
+    grid-template-rows: 40px 40px 300px;
     grid-template-areas:
     "nazwa ilosc"
     "cena cena"
@@ -452,19 +452,22 @@ body{
 
 .prodproductnazwa{
     grid-area: nazwa;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
+    margin: 0;
 }
 
 .prodproductcena{
     grid-area: cena;
     font-size: 20px;
+    margin-top: 0;
 }
 
 .prodproductilosc{
     grid-area: ilosc;
-    font-size: 20px;
+    font-size: 25px;
     margin-top: 4vh;
+    margin-top: 0;
 }
 
 .prodproducttrack{
@@ -544,6 +547,89 @@ body{
 
 .workercartbtn{
     grid-area: btn;
+}
+
+/* ~~~~ koniec ~~~~ */
+
+/* ~~~~ strona edytowania produktu ~~~~ */
+
+.workereditdiv{
+    height: 380px;
+    width: 1200px;
+    background-color: white;
+    margin: 15px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 400px 550px;
+    grid-template-rows: 380px;
+    grid-template-areas:
+    "img rrrr";
+}
+
+.rrrr{
+    grid-area: rrrr;
+    display: grid;
+    grid-template-columns: 480px 100px;
+    grid-template-rows: 40px 40px 300px;
+    grid-template-areas:
+    "nazwa ilosc"
+    "cena s"
+    "track track";
+}
+
+.workereditimg{
+    height: 380px;
+    grid-area: img;
+}
+
+.workereditnazwa{
+    grid-area: nazwa;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 5px 5px 5px 0;
+}
+
+.workereditcena{
+    grid-area: cena;
+    font-size: 20px;
+    margin-top: 0;
+    width: 80px;
+}
+
+.workereditilosc{
+    grid-area: ilosc;
+    font-size: 25px;
+    margin-top: 4vh;
+    margin-top: 0;
+    width: 60px;
+}
+
+.workeredittrack{
+    grid-area: track;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.workereditbtndiv{
+    grid-area: btn;
+}
+
+.workereditbtn{
+    font-size: 20px;
+    background-color: #00000000;
+    border: 1px solid black;
+}
+
+.workereditbtn:hover{
+    background-color: #f0f8ff80;
+    cursor: pointer;
+}
+
+.workereditipt{
+    font-size: 20px;
+    width: 44px;
+    border: 0;
 }
 
 /* ~~~~ koniec ~~~~ */
