@@ -35,7 +35,7 @@ session_start()
         }
 
         if($_SESSION["upraw"] == "admin" or $_SESSION["upraw"] == "worker"){
-            echo "<a href='../../worker' style='margin-left: 15vh;'>
+            echo "<a href='../../workerpanel' style='margin-left: 15vh;'>
             <img src='../../images/workerpanel.png' alt='Panel pracownika' style='height: 60px;'>
             </a>";
         }

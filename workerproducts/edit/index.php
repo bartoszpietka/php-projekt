@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dodawanie produktu</title>
-    <link rel="stylesheet" href="http://localhost/sklep\main-page/style.css">
+    <title>Edytowanie Produktu</title>
+    <link rel="stylesheet" href="http://localhost/sklep/main-page/style.css">
 </head>
 <body>
     <div id="menu">
@@ -25,7 +25,6 @@
         <?php
 
         $sqlquery = mysqli_query($conn, "SELECT * FROM produkty WHERE id=".$_POST["ii"]);
-
         $h = mysqli_fetch_assoc($sqlquery);
 
         echo "<div class='workereditdiv'>
@@ -42,7 +41,10 @@
 
             echo "<div class='workeredittrack'>";
             while($r = mysqli_fetch_assoc($t)){
-                echo "<div style='height: 19px;'><input type='hidden' name='id".$r["id"]."' value='".$r["id"]."'><input name='kp".$r["id"]."' value='".$r["nazwa"]."' style='margin-top: 0; padding-top: 0; border: 0;'></div>";
+                echo "<div style='height: 19px;'>
+                <input type='hidden' name='id".$r["id"]."' value='".$r["id"]."'>
+                <input name='kp".$r["id"]."' value='".$r["nazwa"]."' style='margin-top: 0; padding-top: 0; border: 0;'>
+                </div>";
             }
 
             echo "</div>
