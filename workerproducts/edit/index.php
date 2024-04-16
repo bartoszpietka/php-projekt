@@ -42,8 +42,8 @@
             echo "<div class='workeredittrack'>";
             while($r = mysqli_fetch_assoc($t)){
                 echo "<div style='height: 19px;'>
-                <input type='hidden' name='id".$r["id"]."' value='".$r["id"]."'>
-                <input name='kp".$r["id"]."' value='".$r["nazwa"]."' style='margin-top: 0; padding-top: 0; border: 0;'>
+                <input type='hidden' name='id".$r["Tid"]."' value='".$r["Tid"]."'>
+                <input name='kp".$r["Tid"]."' value='".$r["nazwa"]."' style='margin-top: 0; padding-top: 0; border: 0;'>
                 </div>";
             }
 

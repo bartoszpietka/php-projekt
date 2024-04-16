@@ -29,8 +29,7 @@
         $t = mysqli_query($conn, $sqltrack_query);
 
         while($r = mysqli_fetch_assoc($t)){
-            $sqlquery = "UPDATE `tracks` SET `nazwa`='".$_POST["kp".$r['id']]."' WHERE id=".$_POST["id".$r['id']];
-            $daw = mysqli_query($conn, $sqlquery);
+            $sqlquery = mysqli_query($conn, "UPDATE `tracks` SET `nazwa`='".$_POST["kp".$r["Tid"]]."' WHERE Tid=".$_POST["id".$r["Tid"]]);
         }
         
         header("Location: ../")
