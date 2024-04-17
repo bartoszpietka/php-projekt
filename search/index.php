@@ -35,9 +35,13 @@
                 }else{
                     echo "<p class='productnazwa'>".$h["nazwa"]."</p>";
                 }
-                echo "<p class='productcena'>".$h["cena"]." zł</p>
-                <p class='productilosc'>ilość: ".$h["ilosc"]."</p>
-                <form class='productbtndiv' action='../product' method='get'>
+                echo "<p class='productcena'>".$h["cena"]." zł</p>";
+                if($h["ilosc"]>0){
+                    echo "<p class='productilosc' style='margin-left: 90px;'>ilość: ".$h["ilosc"]."</p>";
+                }else{
+                    echo "<p class='productilosc' style='color: red'>brak w magazynie</p>";
+                }
+                echo "<form class='productbtndiv' action='../product' method='get'>
                     <input name='p' type='hidden' value=".$h["id"].">
                     <input name='n' type='hidden' value=".$h["nazwa"].">
                     <button class='productbtn'>Zobacz Produkt</button>

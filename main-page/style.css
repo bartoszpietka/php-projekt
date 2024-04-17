@@ -224,6 +224,7 @@ body{
     color: #4d96db;
     background-color: #00000000;
     border: 0;
+    cursor: pointer;    
 }
 
 .productworkerdel{
@@ -271,6 +272,7 @@ body{
     color: #4d96db;
     background-color: #00000000;
     border: 0;
+    cursor: pointer;
 }
 
 /* ~~~~ koniec ~~~~ */
@@ -326,6 +328,7 @@ body{
     font-size: 18px;
     background-color: #00000000;
     border: 1px solid #4d96db;
+    cursor: pointer;
 }
 
 .useradminbtndel{
@@ -338,6 +341,7 @@ body{
     color: #db4d4d;
     background-color: #00000000;
     border: 1px solid #db4d4d;
+    cursor: pointer;
 }
 
 /* ~~~~ koniec ~~~~ */
@@ -388,6 +392,7 @@ body{
 
 .usercartbtn{
     grid-area: btn;
+    cursor: pointer;
 }
 
 #divcartbottom{
@@ -438,7 +443,7 @@ body{
     grid-area: free;
     display: grid;
     grid-template-columns: 480px 100px;
-    grid-template-rows: 40px 40px 300px;
+    grid-template-rows: 40px 30px 310px;
     grid-template-areas:
     "nazwa ilosc"
     "cena cena"
@@ -547,6 +552,7 @@ body{
 
 .workercartbtn{
     grid-area: btn;
+    cursor: pointer;
 }
 
 /* ~~~~ koniec ~~~~ */

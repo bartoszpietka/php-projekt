@@ -11,7 +11,7 @@ session_start()
     <style>
         #header{
             display: grid;
-            grid-template-columns: 8% 9% 65% 7% 8%;
+            grid-template-columns: 8% 30% 40% 10% 8%;
             grid-template-rows: 140px;
             grid-template-areas: "homepage panels searchbar userprofile shoppingcart";
             align-items: center;
@@ -51,7 +51,7 @@ session_start()
         }
         ?></div>
 
-        <form action="../search/" id="searchform" style="grid-area: searchbar; display: flex; justify-content: center;">
+        <form action="../search/" id="searchform" style="grid-area: searchbar; display: flex; justify-content: center; width: 500px;">
             <input type="text" id="searchinput" name="s">
             <button id="searchbutton" type="submit" style='cursor: pointer;'>
                 <img src="../images/search.png" alt="wyszukaj" style="height: 19px;">
@@ -60,7 +60,7 @@ session_start()
         
         <?php
         if($_SESSION["czyzalogowano"] == false){
-            echo "<button style='font-size: 20px; background-color: #10101000; border: 2px solid white; width: 130px; color: white;' onclick='zaloguj()'>Zaloguj się</button>";
+            echo "<button style='font-size: 20px; background-color: #10101000;  border: 2px solid white; width: 130px; color: white; cursor: pointer;' onclick='zaloguj()'>Zaloguj się</button>";
 
             $_SESSION["czyzalogowano"] = false;
 
@@ -75,7 +75,7 @@ session_start()
                 <img src='../images/scart.png' alt='Koszyk' style='margin: 0; height: 60px; border: 0;'>
             </a>
             
-            <button style='font-size: 20px; background-color: #10101000; border: 2px solid white; width: 130px; color: white;' onclick='wyloguj()'>Wyloguj się</button>";
+            <button style='font-size: 20px; background-color: #10101000; border: 2px solid white; width: 130px; color: white; cursor: pointer;' onclick='wyloguj()'>Wyloguj się</button>";
         }
         ?>
     </div>
